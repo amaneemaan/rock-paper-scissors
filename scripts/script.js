@@ -3,7 +3,7 @@ let computerScore = 0;
 
 for (let i = 1; i <= 5; i++) {
 
-    const playerSelection = prompt("Round " + i + ": Rock, Paper or Scissors?");
+    const playerSelection = prompt("Round " + i + "/5: Rock, Paper or Scissors?");
     const computerSelection = computerPlay(Math.floor(Math.random()*3));
 
     function computerPlay(x) {
@@ -27,27 +27,27 @@ for (let i = 1; i <= 5; i++) {
             case playerSelection == "paper" && computerSelection == "scissors":
             case playerSelection == "scissors" && computerSelection == "rock":
                 computerScore++;
-                console.log("Your selection: " + playerSelection.toLowerCase() + 
-                ", Computer's selection: " + computerSelection);
-                console.log("Your Score: " + playerScore + 
+                alert("Your selection: " + playerSelection.toLowerCase() + 
+                ", Computer's selection: " + computerSelection + 
+                "\nYour Score: " + playerScore + 
                 ", Computer's score: " + computerScore);
                 break;
             case playerSelection == "rock" && computerSelection == "scissors":
             case playerSelection == "paper" && computerSelection == "rock":
             case playerSelection == "scissors" && computerSelection == "paper":
                 playerScore++;
-                console.log("Your selection: " + playerSelection.toLowerCase() + 
-                ", Computer's selection: " + computerSelection);
-                console.log("Your Score: " + playerScore + 
+                alert("Your selection: " + playerSelection.toLowerCase() + 
+                ", Computer's selection: " + computerSelection + 
+                "\nYour Score: " + playerScore + 
                 ", Computer's score: " + computerScore);
                 break;
             case playerSelection == "rock" && computerSelection == "rock":
             case playerSelection == "paper" && computerSelection == "paper":
             case playerSelection == "scissors" && computerSelection == "scissors":
                 computerScore++, playerScore++;
-                console.log("Your selection: " + playerSelection.toLowerCase() + 
-                ", Computer's selection: " + computerSelection);
-                console.log("Your Score: " + playerScore + 
+                alert("Your selection: " + playerSelection.toLowerCase() + 
+                ", Computer's selection: " + computerSelection + 
+                "\nYour Score: " + playerScore + 
                 ", Computer's score: " + computerScore);
                 break;
             default:
@@ -59,9 +59,9 @@ for (let i = 1; i <= 5; i++) {
 }
 
     if (playerScore > computerScore) {
-        console.log("You've won the game");
+        alert("You've won the game");
     } else if (computerScore > playerScore) {
-        console.log("You've lost the game");
+        alert("You've lost the game");
     } else {
-        console.log("It's a draw");
+        alert("It's a draw");
     }
