@@ -21,32 +21,32 @@ for (let i = 1; i <= 5; i++) {
 
     playRound(playerSelection.toLowerCase(), computerSelection);
 
-    function playRound(playerSelection, computerSelection) {
+    function playRound(a, b) {
         switch (true) {
-            case playerSelection == "rock" && computerSelection == "paper":
-            case playerSelection == "paper" && computerSelection == "scissors":
-            case playerSelection == "scissors" && computerSelection == "rock":
+            case a == "rock" && b == "paper":
+            case a == "paper" && b == "scissors":
+            case a == "scissors" && b == "rock":
                 computerScore++;
-                alert("Your selection: " + playerSelection.toLowerCase() + 
-                ", Computer's selection: " + computerSelection + 
+                alert("Your selection: " + a + 
+                ", Computer's selection: " + b + 
                 "\nYour Score: " + playerScore + 
                 ", Computer's score: " + computerScore);
                 break;
-            case playerSelection == "rock" && computerSelection == "scissors":
-            case playerSelection == "paper" && computerSelection == "rock":
-            case playerSelection == "scissors" && computerSelection == "paper":
+            case a == "rock" && b == "scissors":
+            case a == "paper" && b == "rock":
+            case a == "scissors" && b == "paper":
                 playerScore++;
-                alert("Your selection: " + playerSelection.toLowerCase() + 
-                ", Computer's selection: " + computerSelection + 
+                alert("Your selection: " + a + 
+                ", Computer's selection: " + b + 
                 "\nYour Score: " + playerScore + 
                 ", Computer's score: " + computerScore);
                 break;
-            case playerSelection == "rock" && computerSelection == "rock":
-            case playerSelection == "paper" && computerSelection == "paper":
-            case playerSelection == "scissors" && computerSelection == "scissors":
+            case a == "rock" && b == "rock":
+            case a == "paper" && b == "paper":
+            case a == "scissors" && b == "scissors":
                 computerScore++, playerScore++;
-                alert("Your selection: " + playerSelection.toLowerCase() + 
-                ", Computer's selection: " + computerSelection + 
+                alert("Your selection: " + a + 
+                ", Computer's selection: " + b + 
                 "\nYour Score: " + playerScore + 
                 ", Computer's score: " + computerScore);
                 break;
@@ -58,10 +58,10 @@ for (let i = 1; i <= 5; i++) {
 
 }
 
-    if (playerScore > computerScore) {
-        alert("You've won the game");
-    } else if (computerScore > playerScore) {
-        alert("You've lost the game");
-    } else {
-        alert("It's a draw");
-    }
+if (playerScore > computerScore) {
+    alert("You've won the game");
+} else if (computerScore > playerScore) {
+    alert("You've lost the game");
+} else {
+    alert("It's a draw");
+}
